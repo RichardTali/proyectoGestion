@@ -1,4 +1,4 @@
-# proyecto_final_gestion
+# Proyecto Final Gestión
 
 Breve descripción de lo que hace tu proyecto.
 
@@ -10,19 +10,18 @@ Lista de requerimientos necesarios para ejecutar tu proyecto.
 - Pandas
 - Otros paquetes necesarios
 
+## Instituto Quito
 
-INSTITTO QUITO 
-![Instituto Quito]
-(images/descarga.png)
+![Instituto Quito](images/descarga.png)
 
-## Analisis Dataset
+## Análisis Dataset
 
 ### Sesgo
 
-SESGO
-(images/sesgo1.jpg)
-(images/sesgo2.jpg)
+**SESGO**
 
+![Sesgo 1](images/sesgo1.jpg)
+![Sesgo 2](images/sesgo2.jpg)
 
 ## Instalación
 
