@@ -12,7 +12,16 @@ Lista de requerimientos necesarios para ejecutar tu proyecto.
 
 
 INSTITTO QUITO 
-![Instituto Quito](images/descarga.png)
+![Instituto Quito]
+(images/descarga.png)
+
+## Analisis Dataset
+
+### Sesgo
+
+SESGO
+(images/sesgo1.jpg)
+(images/sesgo2.jpg)
 
 
 ## Instalación

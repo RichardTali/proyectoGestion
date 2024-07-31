@@ -44,7 +44,7 @@ def matriz_correlacion(data):
     print("La fuerte correlación entre login_frequency y session_duration podría ser útil para entender el comportamiento del usuario, aunque no parece estar fuertemente relacionada con el riesgo.")
 
 
-matriz_correlacion(data)
+#matriz_correlacion(data)
 
 
 def grafica_correlacion(data):
@@ -66,7 +66,7 @@ def distribution_in_classes():
     class_counts = data.groupby('anomaly').size()
     print(class_counts)
 print
-distribution_in_classes()
+#distribution_in_classes()
 
 
 #Resumen general del dataset
