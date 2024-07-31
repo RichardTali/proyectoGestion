@@ -19,14 +19,14 @@ def sesgo(data):
     print(result)
 
 
-print("\nCálculo del Sesgo en Columnas Numéricas de un DataFrame")
-sesgo(data)
-print("\nhour_of_day: -0.005089: El sesgo es muy cercano a cero, lo que sugiere que la distribución de esta columna es casi simétrica.")
-print("amount: 0.124223: Un sesgo positivo, aunque pequeño, lo que indica que la distribución está ligeramente sesgada hacia la derecha.")
-print("ip_prefix: -1.438522: Un sesgo negativo significativo, sugiriendo que la distribución está sesgada hacia la izquierda")
-print("login_frequency: 0.174246: Un sesgo positivo leve, indicando que la distribución está ligeramente sesgada hacia la derecha.")
-print("session_duration: 0.660789: Un sesgo positivo notable, sugiriendo que la distribución está sesgada hacia la derecha.")
-print("risk_score: 1.047827: Un sesgo positivo significativo, lo que indica una distribución muy sesgada hacia la derecha.")
+#print("\nCálculo del Sesgo en Columnas Numéricas de un DataFrame")
+#sesgo(data)
+#print("\nhour_of_day: -0.005089: El sesgo es muy cercano a cero, lo que sugiere que la distribución de esta columna es casi simétrica.")
+#print("amount: 0.124223: Un sesgo positivo, aunque pequeño, lo que indica que la distribución está ligeramente sesgada hacia la derecha.")
+#print("ip_prefix: -1.438522: Un sesgo negativo significativo, sugiriendo que la distribución está sesgada hacia la izquierda")
+#print("login_frequency: 0.174246: Un sesgo positivo leve, indicando que la distribución está ligeramente sesgada hacia la derecha.")
+#print("session_duration: 0.660789: Un sesgo positivo notable, sugiriendo que la distribución está sesgada hacia la derecha.")
+#print("risk_score: 1.047827: Un sesgo positivo significativo, lo que indica una distribución muy sesgada hacia la derecha.")
 
 
 #Ejercicio de correlación
@@ -44,7 +44,7 @@ def matriz_correlacion(data):
     print("La fuerte correlación entre login_frequency y session_duration podría ser útil para entender el comportamiento del usuario, aunque no parece estar fuertemente relacionada con el riesgo.")
 
 
-#matriz_correlacion(data)
+matriz_correlacion(data)
 
 
 def grafica_correlacion(data):

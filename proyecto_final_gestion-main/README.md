@@ -23,6 +23,15 @@ Lista de requerimientos necesarios para ejecutar tu proyecto.
 ![Sesgo 1](images/sesgo1.jpg)
 ![Sesgo 2](images/sesgo2.jpg)
 
+
+### MATRIZ DE CORRELACIÓN
+
+**CORRELACIÓN**
+
+![Correlación 1](images/matrizCorrelacion1.jpg)
+![Correlación 2](images/matrizCorrelacion2.jpg)
+
+
 ## Instalación
 
 Pasos para instalar las dependencias y configurar el entorno.
