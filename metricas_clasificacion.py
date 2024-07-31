@@ -3,9 +3,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split, KFold, cross_val_score
 from sklearn.metrics import cohen_kappa_score, accuracy_score, confusion_matrix, ConfusionMatrixDisplay, classification_report
 from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.pipeline import Pipeline
 from sklearn.multiclass import OneVsRestClassifier
+import matplotlib.pyplot as plt
 
 def load_classification_problem(filename):
     # Cargar el dataset
@@ -91,6 +92,7 @@ def confusion_matrix_example(filename):
     # Visualizar la matriz de confusión
     disp = ConfusionMatrixDisplay(confusion_matrix=matrix, display_labels=model.classes_)
     disp.plot(cmap='Blues')
+    plt.show()
 
 def classification_report_example(filename):
     test_size = 0.33
@@ -114,18 +116,38 @@ def classification_report_example(filename):
     matrix = confusion_matrix(Y_test, predicted)
     disp = ConfusionMatrixDisplay(confusion_matrix=matrix, display_labels=model.classes_)
     disp.plot(cmap='Blues')
+    plt.show()
 
-# Llamar a las funciones con el archivo adecuado
-filename = 'dataset/metaverse_transactions_dataset.csv'
+# Función para mostrar el menú
+def mostrar_menu():
+    print("\n--- Menú de Análisis ---")
+    print("1. Evaluación de Precisión")
+    print("2. Kappa de Cohen")
+    print("3. Matriz de Confusión")
+    print("4. Reporte de Clasificación")
+    print("5. Salir")
+    seleccion = input("Selecciona una opción (1-5): ")
+    return seleccion
 
-print("Evaluación de Precisión:")
-accuracy(filename)
+# Función principal que ejecuta el menú
+def ejecutar_menu():
+    filename = 'dataset/metaverse_transactions_dataset.csv'
+    
+    while True:
+        seleccion = mostrar_menu()
+        if seleccion == '1':
+            accuracy(filename)
+        elif seleccion == '2':
+            kappa_cohen(filename)
+        elif seleccion == '3':
+            confusion_matrix_example(filename)
+        elif seleccion == '4':
+            classification_report_example(filename)
+        elif seleccion == '5':
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción no válida. Por favor, elige una opción del 1 al 5.")
 
-print("\nKappa de Cohen:")
-kappa_cohen(filename)
-
-print("\nMatriz de Confusión:")
-confusion_matrix_example(filename)
-
-print("\nReporte de Clasificación:")
-classification_report_example(filename)
+# Llamar a la función principal
+ejecutar_menu()

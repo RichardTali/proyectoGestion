@@ -25,7 +25,7 @@ def error_absoluto():
     predicted = model.predict(X_test)
     # MAE: Error medio Absoluto
     MAE = mean_absolute_error(Y_test, predicted)
-    print("Error Medio Absoluto: {}". format(MAE))
+    print("Error Medio Absoluto: {}".format(MAE))
 
 # Error Cuadrático Medio 
 def error_cuadratico_medio():
@@ -38,7 +38,7 @@ def error_cuadratico_medio():
     predicted = model.predict(X_test)
     # MSE: Error Cuadrático Medio
     MSE = mean_squared_error(Y_test, predicted)
-    print("Error Cuadrático Medio: {}". format(MSE))
+    print("Error Cuadrático Medio: {}".format(MSE))
 
 # Coeficiente de Determinación conocido como R2
 def coeficiente_determinacion():
@@ -51,12 +51,33 @@ def coeficiente_determinacion():
     predicted = model.predict(X_test)
     # Calculo del coeficiente de determinación
     R2 = r2_score(Y_test, predicted)
-    print("Coeficiente de Determinación (R2): {}". format(R2))
-    # valor 0 no tiene ajuste (modelo es ineficiente)
-    # valor 1 tiene un ajuste perfecto
+    print("Coeficiente de Determinación (R2): {}".format(R2))
 
-#Ejecución de las funciones
-error_absoluto()
-error_cuadratico_medio()
-coeficiente_determinacion()
-    
+# Función para mostrar el menú
+def mostrar_menu():
+    print("\n--- Menú de Evaluación ---")
+    print("1. Error Medio Absoluto")
+    print("2. Error Cuadrático Medio")
+    print("3. Coeficiente de Determinación (R2)")
+    print("4. Salir")
+    seleccion = input("Selecciona una opción (1-4): ")
+    return seleccion
+
+# Función principal que ejecuta el menú
+def ejecutar_menu():
+    while True:
+        seleccion = mostrar_menu()
+        if seleccion == '1':
+            error_absoluto()
+        elif seleccion == '2':
+            error_cuadratico_medio()
+        elif seleccion == '3':
+            coeficiente_determinacion()
+        elif seleccion == '4':
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción no válida. Por favor, elige una opción del 1 al 4.")
+
+# Llamar a la función principal
+ejecutar_menu()
